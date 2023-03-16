@@ -1,7 +1,7 @@
 use crate::fl;
 use adw::traits::{EntryRowExt, PreferencesRowExt};
+use done_provider::provider::{List, Task};
 use gtk::traits::{EditableExt, ListBoxRowExt};
-use proto_rust::provider::{List, Task};
 use relm4::{
 	adw, gtk,
 	gtk::prelude::{ButtonExt, WidgetExt},
@@ -62,7 +62,7 @@ impl Component for TaskEntryModel {
 		let model = TaskEntryModel {
 			task: Task::new(String::new(), String::new()),
 			parent_list: init,
-			buffer: gtk::EntryBuffer::new(None),
+			buffer: gtk::EntryBuffer::new(None::<String>),
 		};
 
 		let widgets = view_output!();

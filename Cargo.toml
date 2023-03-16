@@ -1,6 +1,6 @@
 [package]
 name = "done"
-version = "0.1.4"
+version = "0.1.3"
 edition = "2021"
 authors = ["Eduardo Flores <edfloreshz@gmail.com>"]
 license = "MPL 2.0"
@@ -13,7 +13,7 @@ readme = "README.md"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-tokio = { version = "1.24.2", features = ["process"]}
+tokio = { version = "1.25", features = ["process"]}
 strum_macros = "0.24.3"
 i18n-embed-fl = "0.6.4"
 once_cell = "1.13.0"
@@ -33,16 +33,8 @@ version = "0.4.23"
 features = ["serde"]
 
 [dependencies.relm4]
-version = "0.5.0-rc.1"
-features = ["macros", "libadwaita"]
-
-[dependencies.gtk4]
-version = "0.5.5"
-features = ["v4_6"]
-
-[dependencies.libadwaita]
-version = "0.2.1"
-features = ["v1_2"]
+version = "0.6.0-alpha.2"
+features = ["macros", "libadwaita", "gnome_43"]
 
 [dependencies.serde]
 version = "1.0.126"
@@ -67,7 +59,7 @@ branch = "beta"
 [dependencies.directories]
 git = "https://github.com/edfloreshz/directories-rs"
 
-[dependencies.proto_rust]
+[dependencies.done_provider]
 git = "https://github.com/done-devel/proto-rust"
 
 [build-dependencies]
